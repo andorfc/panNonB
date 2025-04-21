@@ -50,13 +50,13 @@ non-B-DNA-atlas/maize/
 ## 🗃️ Datasets
 All genomes, annotations, and variation data were sourced from MaizeGDB:
 
-- Genomes: B73 v5 reference + 25 NAM founders
-- Gene models: Zm00001eb.1 annotation
-- Non-B DNA motif calls: via non-B_gfa
-- SNPs/INDELs: MaizeGDB 2024 High-Coverage + NAM panel
-- SVs: Insertions, deletions, inversions, knobs (Hufford et al., 2021)
-- TFBS / Chromatin: Ricci et al., Tu et al., ATAC-seq, DAP-seq
-- Expression: B73 v5 RNA-seq from qTeller (MaizeGDB)
+- [Genomes](https://download.maizegdb.org/Genomes/NAM_Founders/): B73 v5 reference + 25 NAM founders
+- [Gene models](https://download.maizegdb.org/Genomes/NAM_Founders/): Zm00001eb.1 annotation
+- [Non-B DNA motif calls](https://ars-usda.app.box.com/v/maizegdb-public/folder/230993831603): via non-B_gfa
+- [SNPs/INDELs](https://ars-usda.app.box.com/v/maizegdb-public/folder/255390517505): MaizeGDB 2024 High-Coverage + NAM panel
+- [SVs](https://ars-usda.app.box.com/v/maizegdb-public/folder/165655341912): Insertions, deletions, inversions, knobs (Hufford et al., 2021)
+- [TF Binding sites / Chromatin](https://ars-usda.app.box.com/v/maizegdb-public/folder/165408692531): Ricci et al., Tu et al., ATAC-seq, DAP-seq
+- [Expression](https://ars-usda.app.box.com/v/maizegdb-public/folder/165363728937): B73 v5 RNA-seq from qTeller (MaizeGDB)
 
 ## ⚙️ Tools & Scripts
 - 🧰 non-B_gfa – Non-B motif prediction
@@ -99,7 +99,6 @@ Expression and GO enrichment support functional roles in stress, metabolism, and
 ## 📢 Citation
 Andorf CM, et al. (2024).
 Functional Implications for Genome-Wide Analysis of Non-B DNA in Maize: Forward and Reverse Repeats, G-Quadruplex Sequences, and Z-DNA.
-[Link to publication]
 
 ## 🔗 Additional Resources
 - 📊 Interactive genome tracks: MaizeGDB Track Hub
