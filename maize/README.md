@@ -47,7 +47,7 @@ non-B-DNA-atlas/maize/
 └── environment.yml               # Conda environment with required packages
 ```
 
-🗃️ Datasets
+## 🗃️ Datasets
 All genomes, annotations, and variation data were sourced from MaizeGDB:
 
 - Genomes: B73 v5 reference + 25 NAM founders
@@ -58,20 +58,15 @@ All genomes, annotations, and variation data were sourced from MaizeGDB:
 - TFBS / Chromatin: Ricci et al., Tu et al., ATAC-seq, DAP-seq
 - Expression: B73 v5 RNA-seq from qTeller (MaizeGDB)
 
-⚙️ Tools & Scripts
-🧰 non-B_gfa – Non-B motif prediction
+## ⚙️ Tools & Scripts
+- 🧰 non-B_gfa – Non-B motif prediction
+- 🧬 GFF & BED utilities – Conversion & coordinate normalization
+- 📈 Positional conservation figures – Sliding window counts by motif and gene boundary
+- 📊 Enrichment scripts – Gene ontology, domains, traits, TFs (Fisher’s exact test)
+- 🧪 Variant analysis – SNP/SV enrichment in motif-overlapping regions
+- 🎨 Plotting – Custom matplotlib boxplots, fold-change plots, heatmaps
 
-🧬 GFF & BED utilities – Conversion & coordinate normalization
-
-📈 Positional conservation figures – Sliding window counts by motif and gene boundary
-
-📊 Enrichment scripts – Gene ontology, domains, traits, TFs (Fisher’s exact test)
-
-🧪 Variant analysis – SNP/SV enrichment in motif-overlapping regions
-
-🎨 Plotting – Custom matplotlib boxplots, fold-change plots, heatmaps
-
-🚀 How to Use
+## 🚀 How to Use
 Run the core pipeline for a specific motif and region:
 
 bash
@@ -101,16 +96,13 @@ Non-B regions are depleted of SNPs but enriched for structural variants
 
 Expression and GO enrichment support functional roles in stress, metabolism, and regulation
 
-📢 Citation
+## 📢 Citation
 Andorf CM, et al. (2024).
 Functional Implications for Genome-Wide Analysis of Non-B DNA in Maize: Forward and Reverse Repeats, G-Quadruplex Sequences, and Z-DNA.
 [Link to publication]
 
-🔗 Additional Resources
-📊 Interactive genome tracks: MaizeGDB Track Hub
-
-📜 Full metadata: data/README_datasets.tsv
-
-🧬 non-B_gfa GitHub
-
-📖 MaizeGDB Pan-genome resources
+## 🔗 Additional Resources
+- 📊 Interactive genome tracks: MaizeGDB Track Hub
+- 📜 Full metadata: data/README_datasets.tsv
+- 🧬 non-B_gfa GitHub
+- 📖 MaizeGDB Pan-genome resources
