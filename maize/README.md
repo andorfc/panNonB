@@ -85,23 +85,20 @@ bash
 Copy
 Edit
 sbatch run_make_NAM_perc_figure.sbatch
-🧾 Key Findings (from the paper)
-Non-B motifs make up ~15% of the maize genome
 
-IRs and STRs are the most prevalent, but GQ and Z-DNA are highly enriched in TSS regions
-
-Motifs are conserved across diverse NAM lines and enriched in TFBS and accessible chromatin
-
-Non-B regions are depleted of SNPs but enriched for structural variants
-
-Expression and GO enrichment support functional roles in stress, metabolism, and regulation
+## 🧾 Key Findings (from the paper)
+- Non-B motifs make up ~15% of the maize genome
+- IRs and STRs are the most prevalent, but GQ and Z-DNA are highly enriched in TSS regions
+- Motifs are conserved across diverse NAM lines and enriched in TFBS and accessible chromatin
+- Non-B regions are depleted of SNPs but enriched for structural variants
+- Expression and GO enrichment support functional roles in stress, metabolism, and regulation
 
 ## 📢 Citation
 Andorf CM, et al. (2024).
 Functional Implications for Genome-Wide Analysis of Non-B DNA in Maize: Forward and Reverse Repeats, G-Quadruplex Sequences, and Z-DNA.
 
 ## 🔗 Additional Resources
-- 📊 Interactive genome tracks: MaizeGDB Track Hub
-- 📜 Full metadata: data/README_datasets.tsv
-- 🧬 non-B_gfa GitHub
-- 📖 MaizeGDB Pan-genome resources
+- 📊 [MaizeGDB Genome Browser](https://jbrowse.maizegdb.org/)
+- 🧬 [non-B_gfa GitHub](https://github.com/abcsFrederick/non-B_gfa)
+- 🌽 [NAM genome project](https://maizegdb.org/NAM_project)
+- 📖 [MaizeGDB Pan-genome resources](https://maizegdb.org/genome)
