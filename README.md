@@ -1,5 +1,5 @@
 # 🧬 panNonB
-Pangenome-wide identification, distribution, conservation, and functional annotation of non-canonical DNA structures.
+A pangenome-wide workflow for the identification, distribution, conservation, and functional annotation of non-canonical DNA structures.
 
 ---
 
@@ -23,10 +23,7 @@ Our goal is to provide a standardized, pan-genome–wide resource to explore the
 
 | Species    | Folder            | Status     |
 |------------|-------------------|------------|
-| 🌽 Maize     | [`/maize`](./maize)           | ✅ Published |
-| 🌾 Wheat     | [`/wheat`](./wheat)           | 🧪 In Progress |
-| 🍺 Barley    | [`/barley`](./barley)         | 🧪 In Progress |
-| 🍄 Fusarium  | [`/fusarium`](./fusarium)     | 🧪 In Progress |
+| 🌽 Maize     | [`/maize`](./maize)           | ✅ Submitted for publication |
 
 Each subfolder contains a species-specific README, datasets, code, and results.
 
