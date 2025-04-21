@@ -50,19 +50,13 @@ non-B-DNA-atlas/maize/
 🗃️ Datasets
 All genomes, annotations, and variation data were sourced from MaizeGDB:
 
-Genomes: B73 v5 reference + 25 NAM founders
-
-Gene models: Zm00001eb.1 annotation
-
-Non-B DNA motif calls: via non-B_gfa
-
-SNPs/INDELs: MaizeGDB 2024 High-Coverage + NAM panel
-
-SVs: Insertions, deletions, inversions, knobs (Hufford et al., 2021)
-
-TFBS / Chromatin: Ricci et al., Tu et al., ATAC-seq, DAP-seq
-
-Expression: B73 v5 RNA-seq from qTeller (MaizeGDB)
+- Genomes: B73 v5 reference + 25 NAM founders
+- Gene models: Zm00001eb.1 annotation
+- Non-B DNA motif calls: via non-B_gfa
+- SNPs/INDELs: MaizeGDB 2024 High-Coverage + NAM panel
+- SVs: Insertions, deletions, inversions, knobs (Hufford et al., 2021)
+- TFBS / Chromatin: Ricci et al., Tu et al., ATAC-seq, DAP-seq
+- Expression: B73 v5 RNA-seq from qTeller (MaizeGDB)
 
 ⚙️ Tools & Scripts
 🧰 non-B_gfa – Non-B motif prediction
