@@ -34,14 +34,21 @@ non-B-DNA-atlas/maize/
 │   ├── fa/                       # Chromosome FASTA files
 │   └── tracks/                   # Files for genome browser visualization
 |
-├── tss_pan/                      # The TSS positions for the B73 pan-gene member
-├── cds_pan/                      # The CDS positions for the B73 pan-gene member
-├── exon_pan/                     # The EXON positions for the B73 pan-gene member 
-├── end_pan/                      # The END positions for the B73 pan-gene member
+├── tss_pan/                      # The TSS positions for the pan-gene member in a given genome
+├── cds_pan/                      # The CDS positions for the pan-gene member in a given genome
+├── exon_pan/                     # The EXON positions for the pan-gene member in a given genome
+├── end_pan/                      # The END positions for the pan-gene member in a given genome
+|
+├── scripts/                      # Custom shell scripts for batch processing
+│   ├── names.sh                  # Add Names to the nonB predictions
 |
 ├── scripts/                      # Custom Python scripts for processing
 │   ├── call_nonb_structures.py   # Wrapper for non-B_gfa + GFF conversion
 │   ├── make_NAM_perc_figure.py   # Generates positional conservation figures
+│   ├── parse_TSS_pan.py          # Create the TSS positions for the pan-gene member in a given genome
+│   ├── parse_CDS_pan.py          # Create the CDS positions for the pan-gene member in a given genome
+│   ├── parse_EXON_pan.py         # Create the EXON positions for the pan-gene member in a given genome
+│   ├── parse_END_pan.py          # Create the END positions for the pan-gene member in a given genome
 │   ├── enrichments/              # Enrichment & overlap analysis scripts
 │   └── utils/                    # SNP/SV analysis, expression parsing, etc.
 │
@@ -85,13 +92,13 @@ Run the non_B GFA code
 
 Add Names to the nonB predictions
 
-<pre> ./names.sh  </pre>
+<pre> ./shell/names.sh  </pre>
 
 Make CSV files of gene model positions (Get data as *.gff3.gz from[ MaizeGDB](https://download.maizegdb.org/Genomes/)
-<pre>./parse_gff_pan.sh
-./parse_END_pan.sh
-./parse_exon_pan.sh
-./parse_CDS_pan.sh  </pre>
+<pre>./shell/parse_TSS_pan.sh
+./shell/parse_END_pan.sh
+./shell/parse_exon_pan.sh
+./shell/parse_CDS_pan.sh  </pre>
 
 Calculate and make iamges for distributions of elements against gene features
 
