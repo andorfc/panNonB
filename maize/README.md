@@ -28,6 +28,7 @@ These elements were mapped, quantified, and analyzed in gene bodies, promoters, 
 non-B-DNA-atlas/maize/
 │
 ├── data/                         # Reference & output files
+│   ├── annotations/              # Gene model annotations
 │   ├── gff/                      # GFF files for all motifs per genome
 │   ├── csv/                      # Summary CSVs per motif and genome
 │   ├── fa/                       # Chromosome FASTA files
