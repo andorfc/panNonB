@@ -110,11 +110,11 @@ Make CSV files of gene model positions (Get data as *.gff3.gz from[ MaizeGDB](ht
 
 Calculate and make iamges for distributions of elements against gene features
 
-<pre> ./my_dist_loop.sh  </pre>
+<pre> ./shell/dist_loop.sh  </pre>
 
 Add distance to feature to CSV files:
 
-<pre> python add_distance_to_csv.py ./img/B73.GQ.antisense.tss.csv ./img/B73.GQ.antisense.tss.distance.csv  </pre>
+<pre> python ./scripts/add_distance_to_csv.py ./lists/B73.APR.tss.csv ./lists/B73.APR.tss.distance.csv  </pre>
 
 Find intersections with epigentics and DNA binding features
 
