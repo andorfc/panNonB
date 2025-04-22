@@ -81,6 +81,50 @@ Add Names to the nonB predictions
 
 <pre> ./names.sh  </pre>
 
+Make CSV files of gene model positions
+<pre>./parse_gff_pan.sh
+./parse_END_pan.sh
+./parse_exon_pan.sh
+./parse_CDS_pan.sh  </pre>
+
+Calculate and make iamges for distributions of elements against gene features
+
+./my_dist_loop.sh
+
+Add distance to feature to CSV files:
+
+python add_distance_to_csv.py ./img/B73.GQ.antisense.tss.csv ./img/B73.GQ.antisense.tss.distance.csv
+
+Find intersections with epigentics and DNA binding features
+
+bedtools intersect -a ./TF/EREB138.bed -b ./GFF/B73/GQ.gff -c
+
+sbatch my_pickle_NONB.sh ./B73/Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl
+sbatch my_SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl  ./snp_counts/B73_GQ_HQ_chr10.tsv
+
+Make INDEL files
+
+sbatch my_ins.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./ins/chr1_ins.vcf
+sbatch my_del.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./del/chr1_del.vcf
+sbatch my_pickle_SNPS.sh ./ins/chr1_ins.vcf ./ins/chr1_ins.pkl
+sbatch my_pickle_SNPS.sh ./del/chr1_del.vcf ./del/chr1_del.pkl
+
+sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./ins/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_INS_fast.tsv
+sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./del/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_DEL_fast.tsv
+
+sbatch my_SV_pickle.sh ./SVS/Zm-B97-REFERENCE-NAM-1.0_SV_knobs_centromeres_vs_B73_coordinates.bed ./SV_pickle/B97
+sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./INS_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INS_fast.tsv
+sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./INV_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INV_fast.tsv
+sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./DEL_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_DEL_fast.tsv
+sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./KNOB_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_KNOB_fast.tsv
+
+
+sbatch my_pickle_NONB_atlas.sh ./Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl
+sbatch my_SNPS_atlas.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_chr10.pkl ./counts/B73_GQ_chr10.tsv
+
+
+
+
 
 Run the core pipeline for a specific motif and region:
 
