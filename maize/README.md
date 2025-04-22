@@ -30,6 +30,7 @@ non-B-DNA-atlas/maize/
 ├── data/                         # Reference & output files
 │   ├── gff/                      # GFF files for all motifs per genome
 │   ├── csv/                      # Summary CSVs per motif and genome
+│   ├── fa/                       # Chromosome FASTA files
 │   └── tracks/                   # Files for genome browser visualization
 │
 ├── scripts/                      # Custom Python scripts for processing
@@ -74,8 +75,11 @@ Set up the conda environment
 
 Run the non_B GFA code
 
-<pre> ./gfa -skipWGET -seq chr1.fa -out maize_chr1  </pre>
+<pre> ./gfa -skipWGET -seq ./data/fa/chr1.fa -out ./data/csv/maize_chr1  </pre>
 
+Add Names to the nonB predictions
+
+<pre> ./names.sh  </pre>
 
 
 Run the core pipeline for a specific motif and region:
