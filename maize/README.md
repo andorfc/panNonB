@@ -138,13 +138,13 @@ Find intersections with epigentics and DNA binding features with each non-B elem
 
 
 Make Pickle files for improved performance
-<pre> ./shell/pickle_NONB.sh ./gff/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  </pre>
-<pre> ./shell/pickle_SNPS.sh ../vcf/chr10_clean.vcf ./pickle/B73_SNP_chr10.pkl
+<pre> ./shell/pickle_NONB.sh ./gff/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  
+      ./shell/pickle_SNPS.sh ../vcf/chr10_clean.vcf ./pickle/B73_SNP_chr10.pkl </pre>
 
 Find  intesections with non-B elemetns and SNP data
-<pre> ./shell/SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_snps.tsv  </pre>
-<pre> ./shell/ins.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_ins.tsv  </pre>
-<pre> ./shell/del.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_del.tsv  </pre>
+<pre> ./shell/SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_snps.tsv  
+      ./shell/ins.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_ins.tsv  
+      ./shell/del.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_del.tsv  </pre>
 
 
 Make INDEL files
