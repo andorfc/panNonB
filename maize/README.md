@@ -28,7 +28,7 @@ These elements were mapped, quantified, and analyzed in gene bodies, promoters, 
 non-B-DNA-atlas/maize/
 │
 ├── data/                         # Reference & output files
-│   ├── annotations/              # Gene model annotations
+│   ├── annotations/              # Gene model annotations (GFF)
 │   ├── gff/                      # GFF files for all motifs per genome
 │   ├── csv/                      # Summary CSVs per motif and genome
 │   ├── fa/                       # Chromosome FASTA files
@@ -82,7 +82,7 @@ Add Names to the nonB predictions
 
 <pre> ./names.sh  </pre>
 
-Make CSV files of gene model positions
+Make CSV files of gene model positions (Get data as *.gff3.gz from[ MaizeGDB](https://download.maizegdb.org/Genomes/)
 <pre>./parse_gff_pan.sh
 ./parse_END_pan.sh
 ./parse_exon_pan.sh
