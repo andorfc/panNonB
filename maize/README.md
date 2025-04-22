@@ -72,7 +72,11 @@ Set up the conda environment
 
 <pre> conda env create -f environment.yml  </pre>
 
-<pre> '''bash conda env create -f environment.yml'''  </pre>
+Run the non_B GFA code
+
+<pre> ./gfa -skipWGET -seq chr1.fa -out maize_chr1  </pre>
+
+
 
 Run the core pipeline for a specific motif and region:
 
