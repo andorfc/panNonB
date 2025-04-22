@@ -89,61 +89,39 @@ Make CSV files of gene model positions
 
 Calculate and make iamges for distributions of elements against gene features
 
-./my_dist_loop.sh
+<pre> ./my_dist_loop.sh  </pre>
 
 Add distance to feature to CSV files:
 
-python add_distance_to_csv.py ./img/B73.GQ.antisense.tss.csv ./img/B73.GQ.antisense.tss.distance.csv
+<pre> python add_distance_to_csv.py ./img/B73.GQ.antisense.tss.csv ./img/B73.GQ.antisense.tss.distance.csv  </pre>
 
 Find intersections with epigentics and DNA binding features
 
-bedtools intersect -a ./TF/EREB138.bed -b ./GFF/B73/GQ.gff -c
+<pre> bedtools intersect -a ./TF/EREB138.bed -b ./GFF/B73/GQ.gff -c  </pre>
 
-sbatch my_pickle_NONB.sh ./B73/Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl
-sbatch my_SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl  ./snp_counts/B73_GQ_HQ_chr10.tsv
+<pre> ./my_pickle_NONB.sh ./B73/Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  </pre>
+<pre> ./my_SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl  ./snp_counts/B73_GQ_HQ_chr10.tsv  </pre>
 
 Make INDEL files
 
-sbatch my_ins.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./ins/chr1_ins.vcf
-sbatch my_del.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./del/chr1_del.vcf
-sbatch my_pickle_SNPS.sh ./ins/chr1_ins.vcf ./ins/chr1_ins.pkl
-sbatch my_pickle_SNPS.sh ./del/chr1_del.vcf ./del/chr1_del.pkl
+<pre> ./my_ins.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./ins/chr1_ins.vcf  </pre>
+<pre> ./my_del.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./del/chr1_del.vcf  </pre>
+<pre> ./my_pickle_SNPS.sh ./ins/chr1_ins.vcf ./ins/chr1_ins.pkl  </pre>
+<pre> ./my_pickle_SNPS.sh ./del/chr1_del.vcf ./del/chr1_del.pkl  </pre>
 
-sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./ins/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_INS_fast.tsv
-sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./del/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_DEL_fast.tsv
+<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./ins/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_INS_fast.tsv  </pre>
+<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./del/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_DEL_fast.tsv  </pre>
 
-sbatch my_SV_pickle.sh ./SVS/Zm-B97-REFERENCE-NAM-1.0_SV_knobs_centromeres_vs_B73_coordinates.bed ./SV_pickle/B97
-sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./INS_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INS_fast.tsv
-sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./INV_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INV_fast.tsv
-sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./DEL_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_DEL_fast.tsv
-sbatch my_MB_all.sh ./pickle/B73_APR.pkl ./KNOB_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_KNOB_fast.tsv
-
-
-sbatch my_pickle_NONB_atlas.sh ./Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl
-sbatch my_SNPS_atlas.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_chr10.pkl ./counts/B73_GQ_chr10.tsv
+<pre> ./my_SV_pickle.sh ./SVS/Zm-B97-REFERENCE-NAM-1.0_SV_knobs_centromeres_vs_B73_coordinates.bed ./SV_pickle/B97  </pre>
+<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./INS_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INS_fast.tsv  </pre>
+<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./INV_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INV_fast.tsv  </pre>
+<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./DEL_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_DEL_fast.tsv  </pre>
+<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./KNOB_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_KNOB_fast.tsv  </pre>
 
 
+<pre> ./my_pickle_NONB_atlas.sh ./Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  </pre>
+<pre> ./my_SNPS_atlas.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_chr10.pkl ./counts/B73_GQ_chr10.tsv  </pre>
 
-
-
-Run the core pipeline for a specific motif and region:
-
-bash
-Copy
-Edit
-python scripts/make_NAM_perc_figure.py <element_type> <region_type>
-Example:
-
-bash
-Copy
-Edit
-python scripts/make_NAM_perc_figure.py GQ TSS
-To submit many jobs via SLURM:
-
-bash
-Copy
-Edit
-sbatch run_make_NAM_perc_figure.sbatch
 
 ## 🧾 Key Findings (from the paper)
 - Non-B motifs make up ~15% of the maize genome
