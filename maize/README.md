@@ -33,7 +33,12 @@ non-B-DNA-atlas/maize/
 │   ├── csv/                      # Summary CSVs per motif and genome
 │   ├── fa/                       # Chromosome FASTA files
 │   └── tracks/                   # Files for genome browser visualization
-│
+|
+├── tss_pan/                      # The TSS positions for the B73 pan-gene member
+├── cds_pan/                      # The CDS positions for the B73 pan-gene member
+├── exon_pan/                     # The EXON positions for the B73 pan-gene member 
+├── end_pan/                      # The END positions for the B73 pan-gene member
+|
 ├── scripts/                      # Custom Python scripts for processing
 │   ├── call_nonb_structures.py   # Wrapper for non-B_gfa + GFF conversion
 │   ├── make_NAM_perc_figure.py   # Generates positional conservation figures
