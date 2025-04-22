@@ -70,7 +70,9 @@ All genomes, annotations, and variation data were sourced from MaizeGDB:
 
 Set up the conda environment
 
-<pre> ```bash conda env create -f environment.yml ``` </pre>
+<pre> conda env create -f environment.yml  </pre>
+
+<pre> '''bash conda env create -f environment.yml'''  </pre>
 
 Run the core pipeline for a specific motif and region:
 
