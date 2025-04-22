@@ -67,6 +67,11 @@ All genomes, annotations, and variation data were sourced from MaizeGDB:
 - 🎨 Plotting – Custom matplotlib boxplots, fold-change plots, heatmaps
 
 ## 🚀 How to Use
+
+Set up the conda environment
+
+<pre> ```bash conda env create -f environment.yml ``` </pre>
+
 Run the core pipeline for a specific motif and region:
 
 bash
