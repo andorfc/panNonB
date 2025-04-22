@@ -39,18 +39,26 @@ non-B-DNA-atlas/maize/
 ├── exon_pan/                     # The EXON positions for the pan-gene member in a given genome
 ├── end_pan/                      # The END positions for the pan-gene member in a given genome
 |
+├── lists/                        # Contains CSV lists of distribution sizes that can be used for analysis or figures
+|
 ├── scripts/                      # Custom shell scripts for batch processing
 │   ├── names.sh                  # Add Names to the nonB predictions
+│   ├── parse_TSS_pan.sh          # Create the TSS positions for the pan-gene member in a given genome
+│   ├── parse_CDS_pan.sh          # Create the CDS positions for the pan-gene member in a given genome
+│   ├── parse_EXON_pan.sh         # Create the EXON positions for the pan-gene member in a given genome
+│   ├── parse_END_pan.sh          # Create the END positions for the pan-gene member in a given genome
+│   ├── distribution_loop.sh      # Makes CSV lists of distribution sizes that figures
+
 |
-├── scripts/                      # Custom Python scripts for processing
-│   ├── call_nonb_structures.py   # Wrapper for non-B_gfa + GFF conversion
-│   ├── make_NAM_perc_figure.py   # Generates positional conservation figures
-│   ├── parse_TSS_pan.py          # Create the TSS positions for the pan-gene member in a given genome
-│   ├── parse_CDS_pan.py          # Create the CDS positions for the pan-gene member in a given genome
-│   ├── parse_EXON_pan.py         # Create the EXON positions for the pan-gene member in a given genome
-│   ├── parse_END_pan.py          # Create the END positions for the pan-gene member in a given genome
-│   ├── enrichments/              # Enrichment & overlap analysis scripts
-│   └── utils/                    # SNP/SV analysis, expression parsing, etc.
+├── scripts/                         # Custom Python scripts for processing
+│   ├── call_nonb_structures.py      # Wrapper for non-B_gfa + GFF conversion
+│   ├── make_NAM_perc_figure.py      # Generates positional conservation figures
+│   ├── parse_TSS_pan.py             # Create the TSS positions for the pan-gene member in a given genome
+│   ├── parse_CDS_pan.py             # Create the CDS positions for the pan-gene member in a given genome
+│   ├── parse_EXON_pan.py            # Create the EXON positions for the pan-gene member in a given genome
+│   ├── parse_END_pan.py             # Create the END positions for the pan-gene member in a given genome
+│   ├── make_distribution_lowmem.py  # Makes CSV lists of distribution sizes that figures
+│   └── utils/                       # SNP/SV analysis, expression parsing, etc.
 │
 ├── results/                      # Figures and summary plots
 │   └── nonB_conservation_plots/  # Frequency plots by motif and region
