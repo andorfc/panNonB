@@ -33,6 +33,7 @@ non-B-DNA-atlas/maize/
 │   ├── csv/                      # Summary CSVs per motif and genome
 │   ├── counts/                   # Counts of overlaps
 │   ├── fa/                       # Chromosome FASTA files
+│   ├── sv/                       # Structural variant files
 │   ├── TF/                       # Transcript factor binding or other regulatory feature peaks BED files
 │   ├── fa/                       # Chromosome FASTA filessualization
 │   └── vcf/                      # VCF files
@@ -54,15 +55,19 @@ non-B-DNA-atlas/maize/
 │   ├── parse_END_pan.sh          # Create the END positions for the pan-gene member in a given genome
 │   ├── del.sh                    # Calcuulate deletion frequencies
 │   ├── ins.sh                    # Calcuulate insertion frequencies
+│   ├── MB.sh                     # Calcuulate Mb frequencies for SVs
 │   ├── SNPS.sh                   # Get SNP frequencies
 │   ├── pickle_NonB.sh            # Make pickle file for NonB elements
 │   ├── pickle_SNPs.sh            # Make pickle file for SNPS
+│   ├── pickle_SV.sh              # Make pickle file for structual variants
 │   └── distribution_loop.sh      # Makes CSV lists of distribution sizes that figures
 
 |
 ├── scripts/                         # Custom Python scripts for processing
 │   ├── add_distance_to_csv.py       # Add distance from nonB-element to gene feature
 │   ├── call_nonb_structures.py      # Wrapper for non-B_gfa + GFF conversion
+│   ├── get_SNP_freqs_MB.py          # Calcuulate Mb frequencies for SVs
+
 │   ├── make_NAM_perc_figure.py      # Generates positional conservation figures
 │   ├── parse_TSS_pan.py             # Create the TSS positions for the pan-gene member in a given genome
 │   ├── parse_CDS_pan.py             # Create the CDS positions for the pan-gene member in a given genome
@@ -73,7 +78,8 @@ non-B-DNA-atlas/maize/
 │   ├── ins.py                       # Calcuulate insertion frequencies
 │   ├── get_SNP_freqs_all.py         # Get SNP frequencies
 │   ├── pickleNonB.py                # Make pickle file for NonB elements
-│   └── pickleSNPs.py                # Make pickle file for SNPS
+│   ├── pickleSNPs.py                # Make pickle file for SNPS
+│   └── pickleSVs.py                 # Make pickle file for SVs
 │   
 │
 ├── results/                      # Figures and summary plots
@@ -139,34 +145,25 @@ Find intersections with epigentics and DNA binding features with each non-B elem
 
 Make Pickle files for improved performance
 <pre> ./shell/pickle_NONB.sh ./gff/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  
-./shell/pickle_SNPS.sh ../vcf/chr10_clean.vcf ./pickle/B73_SNP_chr10.pkl </pre>
+./shell/pickle_SNPS.sh ../vcf/chr10_clean.vcf ./pickle/B73_SNP_chr10.pkl
+./shell/pickle_SV.sh ./SVS/Zm-B97-REFERENCE-NAM-1.0_SV_knobs_centromeres_vs_B73_coordinates.bed ./pickle/B97
+</pre>
 
 Find  intesections with non-B elemetns and SNP data
 <pre> ./shell/SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_snps.tsv  
 ./shell/ins.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_ins.tsv  
-./shell/del.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_del.tsv  </pre>
+./shell/del.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_del.tsv
+</pre>
 
 
-Make INDEL files (IN PROGRESS)
+Make breakpoint frequency files (IN PROGRESS)
 
-<pre> ./my_ins.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./ins/chr1_ins.vcf  </pre>
-<pre> ./my_del.sh ../WGS_chr/final_validate/chr1_high_quality.vcf  ./del/chr1_del.vcf  </pre>
-<pre> ./my_pickle_SNPS.sh ./ins/chr1_ins.vcf ./ins/chr1_ins.pkl  </pre>
-<pre> ./my_pickle_SNPS.sh ./del/chr1_del.vcf ./del/chr1_del.pkl  </pre>
-
-<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./ins/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_INS_fast.tsv  </pre>
-<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./del/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_DEL_fast.tsv  </pre>
-
-<pre> ./my_SV_pickle.sh ./SVS/Zm-B97-REFERENCE-NAM-1.0_SV_knobs_centromeres_vs_B73_coordinates.bed ./SV_pickle/B97  </pre>
-<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./INS_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INS_fast.tsv  </pre>
-<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./INV_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_INV_fast.tsv  </pre>
-<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./DEL_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_DEL_fast.tsv  </pre>
-<pre> ./my_MB_all.sh ./pickle/B73_APR.pkl ./KNOB_pickle/  ./snp_counts_NAM//B73_APR_HQ_MBFreq_SV_KNOB_fast.tsv  </pre>
-
-
-<pre> ./shell/my_pickle_NONB_atlas.sh ./Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  </pre>
-
-<pre> ./my_SNPS_atlas.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_chr10.pkl ./counts/B73_GQ_chr10.tsv  </pre>
+<pre> 
+./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_INS.tsv  </pre>
+./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_INV.tsv  </pre>
+./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_DEL.tsv  </pre>
+./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv//B73_APR_HQ_MBFreq_SV_KNOB.tsv  
+</pre>
 
 
 ## 🧾 Key Findings (from the paper)
