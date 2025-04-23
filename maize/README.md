@@ -155,13 +155,12 @@ Find  intesections with non-B elemetns and SNP data
 ./shell/del.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_del.tsv
 </pre>
 
-
-Make breakpoint frequency files (IN PROGRESS)
+Make breakpoint frequency files
 
 <pre> 
-./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_INS.tsv  </pre>
-./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_INV.tsv  </pre>
-./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_DEL.tsv  </pre>
+./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_INS.tsv 
+./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_INV.tsv
+./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv/B73_APR_HQ_MBFreq_SV_DEL.tsv 
 ./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv//B73_APR_HQ_MBFreq_SV_KNOB.tsv  
 </pre>
 
