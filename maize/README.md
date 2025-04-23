@@ -45,10 +45,14 @@ non-B-DNA-atlas/maize/
 |
 ├── lists/                        # Contains CSV lists of distribution sizes that can be used for analysis or figures
 |
+├── panid/                       # Holds the PanID files
+│   └── MaizeGDB_maize_pangene_2020_08.tsv     # Example PanID file
+|
 ├── pickle/                       # Pickle files for improved performance
 |
 ├── shell/                      # Custom shell scripts for batch processing
 │   ├── names.sh                  # Add Names to the nonB predictions
+│   ├── make_pangenome_figure.sh  # Makes pangenome figure show the ditribution of each nonB aound each gene element that are 0-20, 20-40, 40-60, 60-80, and 80-100 percent conserved in the pangeome
 │   ├── parse_TSS_pan.sh          # Create the TSS positions for the pan-gene member in a given genome
 │   ├── parse_CDS_pan.sh          # Create the CDS positions for the pan-gene member in a given genome
 │   ├── parse_EXON_pan.sh         # Create the EXON positions for the pan-gene member in a given genome
@@ -67,13 +71,13 @@ non-B-DNA-atlas/maize/
 │   ├── add_distance_to_csv.py       # Add distance from nonB-element to gene feature
 │   ├── call_nonb_structures.py      # Wrapper for non-B_gfa + GFF conversion
 │   ├── get_SNP_freqs_MB.py          # Calcuulate Mb frequencies for SVs
-
 │   ├── make_NAM_perc_figure.py      # Generates positional conservation figures
 │   ├── parse_TSS_pan.py             # Create the TSS positions for the pan-gene member in a given genome
 │   ├── parse_CDS_pan.py             # Create the CDS positions for the pan-gene member in a given genome
 │   ├── parse_EXON_pan.py            # Create the EXON positions for the pan-gene member in a given genome
 │   ├── parse_END_pan.py             # Create the END positions for the pan-gene member in a given genome
 │   ├── make_distribution_lowmem.py  # Makes CSV lists of distribution sizes that figures
+│   ├── make_pangenome_figure.py     # Makes pangenome figure show the ditribution of each nonB aound each gene element that are 0-20, 20-40, 40-60, 60-80, and 80-100 percent conserved in the pangeome
 │   ├── del.py                       # Calcuulate deletion frequencies
 │   ├── ins.py                       # Calcuulate insertion frequencies
 │   ├── get_SNP_freqs_all.py         # Get SNP frequencies
@@ -125,7 +129,8 @@ Add Names to the nonB predictions
 <pre> ./shell/names.sh  </pre>
 
 Make CSV files of gene model positions (Get data as *.gff3.gz from[ MaizeGDB](https://download.maizegdb.org/Genomes/)
-<pre>./shell/parse_TSS_pan.sh
+<pre>
+./shell/parse_TSS_pan.sh
 ./shell/parse_END_pan.sh
 ./shell/parse_exon_pan.sh
 ./shell/parse_CDS_pan.sh  </pre>
@@ -142,15 +147,16 @@ Find intersections with epigentics and DNA binding features with each non-B elem
 
 <pre> bedtools intersect -a ./data/TF/EREB138.bed -b ./GFF/B73/APR.gff -c  </pre>
 
-
 Make Pickle files for improved performance
-<pre> ./shell/pickle_NONB.sh ./gff/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  
+<pre>
+./shell/pickle_NONB.sh ./gff/Zm-B73-REFERENCE-NAM-5.0_GQ.gff ./pickle/B73_GQ.pkl  
 ./shell/pickle_SNPS.sh ../vcf/chr10_clean.vcf ./pickle/B73_SNP_chr10.pkl
 ./shell/pickle_SV.sh ./SVS/Zm-B97-REFERENCE-NAM-1.0_SV_knobs_centromeres_vs_B73_coordinates.bed ./pickle/B97
 </pre>
 
 Find  intesections with non-B elemetns and SNP data
-<pre> ./shell/SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_snps.tsv  
+<pre> 
+./shell/SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_snps.tsv  
 ./shell/ins.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_ins.tsv  
 ./shell/del.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_del.tsv
 </pre>
@@ -164,6 +170,11 @@ Make breakpoint frequency files
 ./shell/MB.sh ./pickle/B73_APR.pkl ./pickle/  ./data/sv//B73_APR_HQ_MBFreq_SV_KNOB.tsv  
 </pre>
 
+Make PanGenome Figure 
+
+<pre> 
+./shell/make_pangenome_figure.sh
+</pre>
 
 ## 🧾 Key Findings (from the paper)
 - Non-B motifs make up ~15% of the maize genome
