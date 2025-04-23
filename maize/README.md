@@ -88,8 +88,8 @@ non-B-DNA-atlas/maize/
 ## 🗃️ Datasets
 All genomes, annotations, and variation data were sourced from MaizeGDB:
 
-- [Genomes](https://download.maizegdb.org/Genomes/NAM_Founders/): B73 v5 reference + 25 NAM founders
-- [Gene models](https://download.maizegdb.org/Genomes/NAM_Founders/): Zm00001eb.1 annotation
+- [Genomes](https://download.maizegdb.org/Genomes/NAM_Founders/): B73 v5 reference + 25 NAM founders (e.g. Zm-B73-REFERENCE-NAM-5.0)
+- [Gene models](https://download.maizegdb.org/Genomes/NAM_Founders/):  B73 v5 reference + 25 NAM founders annotations (e.g. Zm00001eb.1)
 - [Non-B DNA motif calls](https://ars-usda.app.box.com/v/maizegdb-public/folder/230993831603): via non-B_gfa
 - [SNPs/INDELs](https://ars-usda.app.box.com/v/maizegdb-public/folder/255390517505): MaizeGDB 2024 High-Coverage + NAM panel
 - [SVs](https://ars-usda.app.box.com/v/maizegdb-public/folder/165655341912): Insertions, deletions, inversions, knobs (Hufford et al., 2021)
