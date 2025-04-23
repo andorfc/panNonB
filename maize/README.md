@@ -84,12 +84,8 @@ non-B-DNA-atlas/maize/
 │   ├── pickleNonB.py                # Make pickle file for NonB elements
 │   ├── pickleSNPs.py                # Make pickle file for SNPS
 │   └── pickleSVs.py                 # Make pickle file for SVs
-│   
 │
-├── results/                      # Figures and summary plots
-│   └── nonB_conservation_plots/  # Frequency plots by motif and region
-│
-├── logs/                         # Slurm job logs
+├── log/                         # Slurm job logs
 │
 ├── README.md
 └── environment.yml               # Conda environment with required packages
