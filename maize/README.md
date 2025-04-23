@@ -46,7 +46,7 @@ non-B-DNA-atlas/maize/
 |
 ├── pickle/                       # Pickle files for improved performance
 |
-├── scripts/                      # Custom shell scripts for batch processing
+├── shell/                      # Custom shell scripts for batch processing
 │   ├── names.sh                  # Add Names to the nonB predictions
 │   ├── parse_TSS_pan.sh          # Create the TSS positions for the pan-gene member in a given genome
 │   ├── parse_CDS_pan.sh          # Create the CDS positions for the pan-gene member in a given genome
@@ -73,8 +73,8 @@ non-B-DNA-atlas/maize/
 │   ├── ins.py                       # Calcuulate insertion frequencies
 │   ├── get_SNP_freqs_all.py         # Get SNP frequencies
 │   ├── pickleNonB.py                # Make pickle file for NonB elements
-│   ├── pickleSNPs.py                # Make pickle file for SNPS
-│   └── utils/                       # SNP/SV analysis, expression parsing, etc.
+│   └── pickleSNPs.py                # Make pickle file for SNPS
+│   
 │
 ├── results/                      # Figures and summary plots
 │   └── nonB_conservation_plots/  # Frequency plots by motif and region
