@@ -150,7 +150,7 @@ Make Pickle files for improved performance
 ./shell/pickle_SV.sh ./SVS/Zm-B97-REFERENCE-NAM-1.0_SV_knobs_centromeres_vs_B73_coordinates.bed ./pickle/B97
 </pre>
 
-Find  intesections with non-B elemetns and SNP data
+Find  intesections with non-B elements and SNP data
 <pre> 
 ./shell/SNPS.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_snps.tsv  
 ./shell/ins.sh ./pickle/B73_GQ.pkl ./pickle/B73_SNP_HQ_chr10.pkl ./data/counts/B73_GQ_HQ_chr10_ins.tsv  
