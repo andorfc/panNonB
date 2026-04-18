@@ -1,5 +1,6 @@
 # 🌽 Non-B DNA Structures in the Maize Pan-Genome
 
+The Non-B DNA Landscape of the Maize Pan-Genome
 **Genome-wide Analysis of A-Phased Repeats, Direct Repeats, G-Quadruplexes, Inverted Repeats, Mirror Repeats, Short Tandem Repeats, and Z-DNA across 26 Maize Genomes**
 
 This repository provides datasets, scripts, and tools used in our pan-genome-wide analysis of non-B DNA structures in maize, focusing on their distribution, conservation, and functional relevance across the B73 reference genome and 25 NAM founder lines.
@@ -180,8 +181,8 @@ Make PanGenome Figure
 - Expression and GO enrichment support functional roles in stress, metabolism, and regulation
 
 ## 📢 Citation
-Andorf CM, et al. (2024).
-Functional Implications for Genome-Wide Analysis of Non-B DNA in Maize: Forward and Reverse Repeats, G-Quadruplex Sequences, and Z-DNA.
+Andorf CM, et al. (2026).
+The Non-B DNA Landscape of the Maize Pan-Genome.
 
 ## 🔗 Additional Resources
 - 📊 [MaizeGDB Genome Browser](https://jbrowse.maizegdb.org/)
