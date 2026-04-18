@@ -131,7 +131,7 @@ Make CSV files of gene model positions (Get data as *.gff3.gz from[ MaizeGDB](ht
 ./shell/parse_exon_pan.sh
 ./shell/parse_CDS_pan.sh  </pre>
 
-Calculate and make iamges for distributions of elements against gene features
+Calculate and make images for distributions of elements against gene features
 
 <pre> ./shell/dist_loop.sh  </pre>
 
