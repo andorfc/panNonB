@@ -1,6 +1,6 @@
-# 🌽 Non-B DNA Structures in the Maize Pan-Genome
+# 🌽 The Non-B DNA Landscape of the Maize Pan-Genome
 
-**The Non-B DNA Landscape of the Maize Pan-Genome : Genome-wide Analysis of A-Phased Repeats, Direct Repeats, G-Quadruplexes, Inverted Repeats, Mirror Repeats, Short Tandem Repeats, and Z-DNA across 26 Maize Genomes**
+**Genome-wide Analysis of A-Phased Repeats, Direct Repeats, G-Quadruplexes, Inverted Repeats, Mirror Repeats, Short Tandem Repeats, and Z-DNA across 26 Maize Genomes**
 
 This repository provides datasets, scripts, and tools used in our pan-genome-wide analysis of non-B DNA structures in maize, focusing on their distribution, conservation, and functional relevance across the B73 reference genome and 25 NAM founder lines.
 
