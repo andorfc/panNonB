@@ -45,21 +45,21 @@ non-B-DNA-atlas/maize/
 |
 ├── lists/                        # Contains CSV lists of distribution sizes that can be used for analysis or figures
 |
-├── panid/                       # Holds the PanID files
+├── panid/                        # Holds the PanID files
 │   └── MaizeGDB_maize_pangene_2020_08.tsv     # Example PanID file
 |
 ├── pickle/                       # Pickle files for improved performance
 |
-├── shell/                      # Custom shell scripts for batch processing
+├── shell/                        # Custom shell scripts for batch processing
 │   ├── names.sh                  # Add Names to the nonB predictions
 │   ├── make_pangenome_figure.sh  # Makes pangenome figure show the ditribution of each nonB aound each gene element that are 0-20, 20-40, 40-60, 60-80, and 80-100 percent conserved in the pangeome
 │   ├── parse_TSS_pan.sh          # Create the TSS positions for the pan-gene member in a given genome
 │   ├── parse_CDS_pan.sh          # Create the CDS positions for the pan-gene member in a given genome
 │   ├── parse_EXON_pan.sh         # Create the EXON positions for the pan-gene member in a given genome
 │   ├── parse_END_pan.sh          # Create the END positions for the pan-gene member in a given genome
-│   ├── del.sh                    # Calcuulate deletion frequencies
-│   ├── ins.sh                    # Calcuulate insertion frequencies
-│   ├── MB.sh                     # Calcuulate Mb frequencies for SVs
+│   ├── del.sh                    # Calculate deletion frequencies
+│   ├── ins.sh                    # Calculate insertion frequencies
+│   ├── MB.sh                     # Calculate Mb frequencies for SVs
 │   ├── SNPS.sh                   # Get SNP frequencies
 │   ├── pickle_NonB.sh            # Make pickle file for NonB elements
 │   ├── pickle_SNPs.sh            # Make pickle file for SNPS
@@ -85,7 +85,7 @@ non-B-DNA-atlas/maize/
 │   ├── pickleSNPs.py                # Make pickle file for SNPS
 │   └── pickleSVs.py                 # Make pickle file for SVs
 │
-├── log/                         # Slurm job logs
+├── log/                          # Slurm job logs
 │
 ├── README.md
 └── environment.yml               # Conda environment with required packages
